@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "bioflex"
+version = "1.0.0"
+authors = [{name="BioTuring developers", email="support@bioturing.com"}]
+description = "A set of python modules for accessing BioTuring single-cell database"
+readme = "README.md"
+license = { text="MIT" }
+requires-python = ">=3.7"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = ["requests", "numpy", "scipy", "tqdm", "h5py"]
+
+[project.urls]
+"Homepage" = "https://datascience.bioturing.com/"
+"Bug Tracker" = "https://github.com/bioturing/bioflex/issues"

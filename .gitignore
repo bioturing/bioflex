@@ -1,0 +1,15 @@
+*.so
+*.dll
+*.lib
+*.pid
+*.seed
+*.dylib
+*.pid.lock
+**/__pycache__
+**/.ipynb_checkpoints
+**/package-lock.json
+**.egg-info
+
+dist
+pids
+.vscode
