@@ -5,7 +5,6 @@ from ._base_object import _BaseObject
 
 class _Study(_BaseObject):
 	database: _Database
-
 	id: int
 	hash_id: str
 	title: str
@@ -19,7 +18,6 @@ class _Study(_BaseObject):
 		super().__init__(database)
 
 		self.database = database
-		self.id = response['id']
 		self.hash_id = response['hash_id']
 		self.title = response['title']
 		self.authors = response['authors']
@@ -27,13 +25,13 @@ class _Study(_BaseObject):
 
 
 	def __repr__(self):
-		return 'Study(id="{}",hash_id="{}",title="{}",reference="{}")'.format(
-			self.id, self.hash_id, self.title, self.reference
+		return 'Study(hash_id="{}",title="{}",reference="{}")'.format(
+			self.hash_id, self.title, self.reference
 		)
 
 
 	def _post_params(self, params: dict):
 		return {
-			'study_idx': self.id,
+			'hash_id': self.hash_id,
 			**params,
 		}

@@ -125,3 +125,22 @@ class Study(_Study):
 		 """
 
 		return self._post_request('/v1/study/get_barcodes')
+
+
+	def export_study(self, export_format='str'):
+		""" Export Study in h5ad/seurat
+		Returns
+		-------
+		{
+			download_link: str,
+			study_hash_id: str
+		}
+		Examples:
+		-------
+		>>> study.export_study()
+		{
+			"download_link": "https://talk2data.bioturing.com/api/export/f51217b4a3af4ea6a4c3656a******",
+			"study_hash_id": "GSE99888"
+		}
+		"""
+		return self._post_request('/v1/study/export_study', {'export_format': export_format})
