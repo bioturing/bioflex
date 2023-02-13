@@ -139,5 +139,14 @@ study.matrix(bioflex.UNIT_LOGNORM)
 > <29065x64642 sparse matrix of type '<class 'numpy.float32'>'
 > 	with 17570739 stored elements in Compressed Sparse Column format>
 
+### Export Study:
+
+```python
+study.export_study(bioflex.EXPORT_H5AD)
+```
+>```
+>{'download_link': 'https://talk2data.bioturing.com/api/export/a1003bad3dd146b28c7bda913a2fc3f0',
+> 'study_hash_id': 'GSE96583_batch2'}
+
 ----
 For further information please check the [documentation](https://datascience.bioturing.com/).
