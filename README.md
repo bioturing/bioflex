@@ -62,7 +62,7 @@ study = database.get_study('GSE96583_batch2')
 study
 ```
 >```
-> Study(id="1557",hash_id="GSE96583_batch2",
+> Study(id="GSE96583_batch2",
 >       title="Multiplexed droplet single-cell RNA-sequencing using natural genetic variation (Batch 2)",
 >       reference="https://www.nature.com/articles/nbt.4042")
 

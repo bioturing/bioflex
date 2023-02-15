@@ -18,20 +18,20 @@ class _Study(_BaseObject):
 		super().__init__(database)
 
 		self.database = database
-		self.hash_id = response['hash_id']
+		self.id = response['id']
 		self.title = response['title']
 		self.authors = response['authors']
 		self.reference = response['reference']
 
 
 	def __repr__(self):
-		return 'Study(hash_id="{}",title="{}",reference="{}")'.format(
-			self.hash_id, self.title, self.reference
+		return 'Study(id="{}",title="{}",reference="{}")'.format(
+			self.id, self.title, self.reference
 		)
 
 
 	def _post_params(self, params: dict):
 		return {
-			'hash_id': self.hash_id,
+			'study_idx': self.id,
 			**params,
 		}
